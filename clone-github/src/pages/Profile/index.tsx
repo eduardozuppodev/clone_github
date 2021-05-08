@@ -3,7 +3,7 @@ import React from 'react';
 // import { Container } from './styles';
 
 const Profile: React.FC = () => {
-  return <div />;
+  return <div>OI</div>;
 }
 
 export default Profile;

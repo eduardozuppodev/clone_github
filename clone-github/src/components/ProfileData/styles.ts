@@ -38,6 +38,8 @@ export const Avatar = styled.img`
 export const Row = styled.ul`
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  margin: 20px 0;
 
   > li {
     display: flex;

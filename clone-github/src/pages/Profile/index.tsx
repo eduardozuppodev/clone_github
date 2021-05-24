@@ -18,7 +18,7 @@ const Profile: React.FC = () => {
             company={'TheDevs'}
             location={'São Paulo, Brazil'}
             email={'eduzuppo@gmail.com'}
-            blog={undefined}
+            blog={'https://www.linkedin.com/in/eduardo-zuppo-8878731a3/'}
           />
         </LeftSide>
 

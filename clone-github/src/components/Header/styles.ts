@@ -16,5 +16,20 @@ export const GithubLogo = styled(FaGithub)`
 `;
 
 export const SearchForm = styled.form`
-    padding-left: 16px;
+  padding-left: 16px;
+  width: 100%;
+
+  input {
+    background: var(--search);
+    outline: 0;
+    border-radius: 6px;
+    padding: 7px 12px;
+    width: 20%;
+
+    &:focus {
+      width: 318px;
+    }
+
+    transition: width 0.2s ease-out, color 0.2s ease-out;
+  }
 `;

@@ -1,6 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Container } from './styles';
+
+import {
+  Container,
+  Topside,
+  RepoIcon,
+  Botside,
+  StarIcon,
+  ForkIcon,
+} from './styles';
 
 interface Props {
   username: string;
@@ -23,14 +31,14 @@ const RepoCard: React.FC<Props> = ({
 
   return (
     <Container>
-      <Topsite>
+      <Topside>
         <header>
           <RepoIcon />
           <Link to={`/${username}/${reponame}`}>{reponame}</Link>
         </header>
 
         <p>{description}</p>
-      </Topsite>
+      </Topside>
 
       <Botside>
         <ul>
@@ -40,6 +48,11 @@ const RepoCard: React.FC<Props> = ({
           </li>
           <li>
             <StarIcon />
+            <span>{stars}</span>
+          </li>
+          <li>
+            <ForkIcon />
+            <span>{forks}</span>
           </li>
         </ul>
       </Botside>

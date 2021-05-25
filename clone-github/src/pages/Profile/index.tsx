@@ -17,9 +17,9 @@ const Profile: React.FC = () => {
             avatarUrl={'https://avatars.githubusercontent.com/u/69389822?v=4'}
             followers={654}
             following={56}
-            company={'TheDevs'}
+            company={'Grupo Freitas'}
             location={'São Paulo, Brazil'}
-            email={'eduzuppo@gmail.com'}
+            email={'zuppo.edu@gmail.com'}
             blog={'https://www.linkedin.com/in/eduardo-zuppo-8878731a3/'}
           />
         </LeftSide>
@@ -29,17 +29,17 @@ const Profile: React.FC = () => {
             <h2>Random Repos</h2>
 
             <div>
-              {[1, 2, 3, 4, 5, 6].map(n => {
+              {[1, 2, 3, 4, 5, 6].map(n => (
                 <RepoCard
                   key={n}
                   username={'eduardozuppodev'}
                   reponame={'github-clone'}
                   description={'Clone of the Github profile page'}
-                  language={n % 3 === 0 ? 'Javascript' : 'Typescript'}
+                  language={n % 3 === 0 ? 'JavaScript' : 'TypeScript'}
                   stars={8}
                   forks={4}
                 />
-              })}
+              ))}
             </div>
           </Repos>
         </RightSide>

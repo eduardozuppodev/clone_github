@@ -1,6 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 
-import { Container, Main, LeftSide, RightSide, Repos, CalendarHeading, RepoIcon, Tab } from './styles';
+import {
+  Container,
+  Main,
+  LeftSide,
+  RightSide,
+  Repos,
+  CalendarHeading,
+  RepoIcon,
+  Tab,
+} from './styles';
 
 import ProfileData from '../../components/ProfileData';
 import RepoCard from '../../components/RepoCard';
@@ -8,6 +18,22 @@ import RandomCalendar from '../../components/RandomCalendar';
 
 
 const Profile: React.FC = () => {
+  const { username = 'eduardozuppodev' } = useParams();
+
+  useEffect(() => {
+    Promise.all([
+      fetch(`https://api.github.com/users/${username}`),
+      fetch(`https://api.github.com/users/${username}/repos`),
+    ]).then(async (responses) => {
+      console.log([
+        await responses[0].json(),
+        await responses[1].json(),
+      ]);
+    })
+  }, [username]);
+
+
+
   const TabContent = () => (
     <div className="content">
       <RepoIcon />
@@ -20,7 +46,7 @@ const Profile: React.FC = () => {
     <Container>
       <Tab className="desktop">
         <div className="wrapper">
-          <span className="offset"/>
+          <span className="offset" />
           <TabContent />
         </div>
 

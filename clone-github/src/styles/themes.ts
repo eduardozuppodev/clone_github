@@ -33,7 +33,7 @@ export const themes = {
     gray: "#afafaf",
     "gray-light": "#6a737d",
     "gray-dark": "#c6c6c6",
-    orange: "#fff",
+    orange: "rgb(79, 140, 201)",
 
     header: "#2D333B",
     logo: "#fff",
